@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="Cybench: Evaluating Language Models on Cybersecurity Challenges">
+    <title>Cybench</title>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+    <script src="https://cdn.datatables.net/plug-ins/2.0.8/sorting/absolute.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/4.2.0/mustache.min.js"></script>
+    </head>
+<body>
+    <div class="menu">
+        <h1 class="header"><a href="index.html">Cybench</a></h1>
+        <div class="content-wrapper header button-group">
+            <a href=""><button class="outline">
+                <img src="img/bxs-paper-plane.svg"></img>
+                <span class="outline">Paper</span>
+            </button></a>
+            <a href="https://github.com/andyzorigin/cybench"><button class="outline">
+                <img src="img/icons8-github.svg"></img>
+                <span class="outline">GitHub</span>
+            </button></a>
+            <a href=""><button class="outline">
+                <img src="img/bxs-window-alt.svg"></img>
+                <span class="outline">Blog</span>
+            </button></a>
+            <a href="#leaderboard_title" id="scrollToLeaderboard"><button class="outline">
+                <img src="img/bxs-medal.svg"></img>
+                <span class="outline">Leaderboard</span>
+            </button></a>
+            <a href="#ethics_statement" id="scrollToEthics"><button class="outline">
+                <img src="img/bxs-book-bookmark.svg"></img>
+                <span class="outline">Ethics</span>
+            </button></a>
+        </div>
+    </div>
+
+    <div id="website-body">
+        <section class="main-container">
+            <div class="content-box visual">
+                <h4 class="catchphrase">A benchmark for evaluating the cybersecurity capabilities of language models.</h4>
+            </div>
+            <div class="content-wrapper">
+                <div class="content-box visual">
+                        <div class="content-box visual" style="margin-bottom: 0rem;">
+                            <h2 class="text-title" id="leaderboard_title">Leaderboard
+                            </h2>
+                            <div class="table-container" style="max-width: 100%;">
+                                <div class="tabcontent tabcontentall">
+                                    <table class="table scrollable" id="leaderboard">
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-swatch" style="width:60rem; max-width: 100%; padding: 1rem">
+                            <!-- <p class="text-content context" style="padding:0rem">
+                            Our testing highlights several key metrics:
+                            </p> -->
+                            <ul class="metrics-list">
+                                <li><strong>Unguided % Solved:</strong> Success rate on the 40 tasks without subtask guidance.</li>
+                                <li><strong>Subtask-Guided % Solved:</strong> Success rate on the 17 subtask-annotated tasks with subtask guidance.</li>
+                                <li><strong>Subtasks % Solved:</strong> Percentage of subtasks solved per task, macro-averaged across the 17 subtask-annotated tasks.</li>
+                                <li><strong>Most Difficult Task Solved (First Solve Time):</strong> The highest first solve time of successfully solved tasks. First solve time is the time it takes for the first team to solve a given challenge in a CTF competition.</li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+            <div class="content-wrapper visual">
+                <div class="text-swatch visual" style="padding: 0rem; margin-top: 3rem; max-width: 100%;">
+                    <h3 class="text-title about">About
+                    </h3>
+                    <div class="visual" style="background-color: white; padding: 0.9rem; margin-bottom: 0.9rem; border-radius: 0.4rem; max-width: 95%;"><img src="img/cybench_updated.jpeg" style="max-width: 95%; width: 45rem"></img></div>
+                    <div class="text-swatch" style="width:50rem; max-width: 100%;">
+                        <p class="text-content context small">
+                            Each task includes a <span style="color: #c7b05a; font-weight: bold;">task description</span>, 
+                            <span style="color: #d39090; font-weight: bold;">starter files</span>, and an <span style="color: #7f9fb3; font-weight: bold;">evaluator</span>. 
+                            A task can also have subtasks, each with an associated question and answer which are scored separately for incremental progress. 
+                            Starter files contain 
+                            <span style="color: #db6c5b; font-weight: bold;">local files</span> that the 
+                            <span style="color: #9c77ad; font-weight: bold;">agent</span> can directly interact with and/or 
+                            <span style="color: #bf5151; font-weight: bold;">remote files</span> that are hosted in a separate task-server that the 
+                            agent can interact with through network calls. 
+                            The agent executes commands in bash, which yield observations that are added to the agent’s memory. 
+                            Finally, when the agent is ready, it can submit its 
+                            <span style="color: #8bbb8d; font-weight: bold;">answer</span>, which the 
+                            evaluator will compare against the answer key.
+                        </p>
+                    </div>
+                </div>
+                <div class="content-box visual" id="ethics_statement" style="max-width: 100%;">
+                    <h3 class="text-title challs" style="font-size: 16pt;">Ethics Statement
+                    </h3>
+                    <div class="text-swatch" style="width:45rem; max-width: 100%; background: none">
+                        <p class="text-content context small">
+                            There is a long history of dual-use technology in cybersecurity and there have been extensive discussions of how to weigh the benefits and risks of releasing such technologies. Here we acknowledge that we introduce two dual-use technologies: the agent and the benchmark, and will explain our reasoning for releasing our code and data having carefully weighing the benefits and harms of each choice.
+                            <span class="paragraph">In considering the harms, the concern of releasing the agent is that it may be leveraged to identify vulnerabilities and execute exploits on real systems by malicious actors. Similarly, the concern of releasing the framework is that it may accelerate development of stronger cybersecurity agents, which can then be leveraged for harm.</span>
+                            <span class="paragraph">Next in considering benefits, the agent can be seen as an automated penetration testing tool, which are dual-use technology released openly. Rather than question this practice, we adopt the consensus in the community that releasing such tools is sensible and is net beneficial.</span>
+                            <span class="paragraph">Finally, we are researchers publishing a scientific article, and reproducibility and transparency are core to our beliefs. While transparency in code, data, and methods is not sufficient to guarantee reproducibility as mistakes can occur in the research process, obscurity can ensure irreproducibility. Additionally, releasing our code allows the community to build upon our work, helping accelerate scientific progress.</span>
+
+                            
+                        </p>                        
+                    </div>
+                </div>
+                <div class="content-box visual" style="margin-top: 2rem; max-width: 100%">
+                    <div class="text-swatch" style="width:50rem; max-width: 100%;">
+                        <p class="text-content" style="padding:1rem">
+                            Cite:
+                        </p>
+                        <div class="citation">
+                            @inproceedings{<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span style="white-space: nowrap;">&lt;unique_identifier&gt;,</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span style="white-space: nowrap;">title={{&lt;title_of_the_paper&gt;}},</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span style="white-space: nowrap;">author={&lt;authors&gt; and &lt;authors&gt;},</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span style="white-space: nowrap;">booktitle={The &lt;conference_name&gt;},</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span style="white-space: nowrap;">year={&lt;year_of_publication&gt;},</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span style="white-space: nowrap;">url={&lt;url_to_the_paper&gt;}</span><br>
+                            }
+                          </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </div>
+    <footer class="footer-container">
+        <div class="container-wrapper">
+            <div class="footer-text">
+                <a href="https://crfm.stanford.edu/">© 2024. Stanford Center for Research on Foundation Models.</a>
+            </div>
+        </div>
+    </footer>
+    <script src="js/homeSetup.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            setupHome();
+        });
+    </script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        window.addEventListener('scroll', () => {
+            const menu = document.querySelector('.menu');
+            const header = document.querySelector('h1.header');
+            
+            const scrollDistance = window.scrollY;
+            var isScrolled = scrollDistance >= 70;
+
+            if (isScrolled) {
+                menu.classList.add('scrolled');
+                header.classList.add('scrolled');
+            } else {
+                menu.classList.remove('scrolled');
+                header.classList.remove('scrolled');
+            }
+
+            const buttons = document.querySelectorAll('.outline');
+            buttons.forEach(button => {
+                if (isScrolled) {
+                    button.classList.add('scrolled');
+                } else {
+                    button.classList.remove('scrolled');
+                }
+            });
+        });
+    });
+    document.getElementById('scrollToLeaderboard').addEventListener('click', function(e) {
+        e.preventDefault(); // Prevent the default anchor click behavior
+
+        // Get the target element
+        var target = document.getElementById('leaderboard_title');
+
+        var remOffset = 5; // Change this value to your desired rem offset
+        var remInPx = remOffset * parseFloat(getComputedStyle(document.documentElement).fontSize);
+
+        // Calculate the position to scroll to (rem offset converted to px)
+        var offsetTop = target.getBoundingClientRect().top + window.pageYOffset - remInPx;
+
+        // Scroll to the calculated position
+        window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+    });
+    document.getElementById('scrollToEthics').addEventListener('click', function(e) {
+        e.preventDefault(); // Prevent the default anchor click behavior
+
+        // Get the target element
+        var target = document.getElementById('ethics_statement');
+
+        var remOffset = 3; // Change this value to your desired rem offset
+        var remInPx = remOffset * parseFloat(getComputedStyle(document.documentElement).fontSize);
+
+        // Calculate the position to scroll to (rem offset converted to px)
+        var offsetTop = target.getBoundingClientRect().top + window.pageYOffset - remInPx;
+
+        // Scroll to the calculated position
+        window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+    });
+</script>
+</body>
+</html>
