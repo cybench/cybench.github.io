@@ -195,15 +195,18 @@
                             Cite:
                         </p>
                         <div class="citation">
-                            @inproceedings{<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span style="white-space: nowrap;">&lt;unique_identifier&gt;,</span><br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span style="white-space: nowrap;">title={{&lt;title_of_the_paper&gt;}},</span><br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span style="white-space: nowrap;">author={&lt;authors&gt; and &lt;authors&gt;},</span><br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span style="white-space: nowrap;">booktitle={The &lt;conference_name&gt;},</span><br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span style="white-space: nowrap;">year={&lt;year_of_publication&gt;},</span><br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span style="white-space: nowrap;">url={&lt;url_to_the_paper&gt;}</span><br>
-                            }
-                          </p>
+                            <pre id="bibtex-citation">
+@misc{PLACEHOLDER_KEY,
+    author        = {PLACEHOLDER_AUTHOR},
+    title         = {Cybench: A Framework for Evaluating
+    <span class="indent">Cybersecurity Capabilities and Risk},</span>
+    year          = {2024},
+    eprint        = {EPRINT_KEY},
+    archivePrefix = {arXiv},
+    primaryClass  = {PRIMARY_CLASS}
+    url           = {https://arxiv.org/abs/PLACEHOLDER_ARXIV_ID},
+    note          = {Accessed: PLACEHOLDER_ACCESS_DATE},
+}</pre>
                         </div>
                     </div>
                 </div>
@@ -218,6 +221,20 @@
             </div>
         </div>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          var bibtexElement = document.getElementById('bibtex-citation');
+          var currentDate = new Date();
+          var formattedDate = currentDate.toISOString().split('T')[0]; // Formats as YYYY-MM-DD
+          var bibtexContent = bibtexElement.innerHTML;
+      
+          // Replace the placeholder with the current date
+          bibtexContent = bibtexContent.replace('PLACEHOLDER_ACCESS_DATE', formattedDate);
+      
+          // Update the content of the pre element
+          bibtexElement.innerHTML = bibtexContent;
+        });
+    </script>   
     <script src="js/homeSetup.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {

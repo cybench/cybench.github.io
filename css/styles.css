@@ -891,6 +891,22 @@ p.slide-cat {
     margin-top: 0rem;
     border-radius: 0.4rem;
 }
+
+
+pre {
+    white-space: pre-wrap;      
+    white-space: -moz-pre-wrap; 
+    white-space: -pre-wrap;     
+    white-space: -o-pre-wrap;   
+    word-wrap: break-word;      
+}
+
+pre span.indent {
+    /* display: block; */
+    margin-left: 10rem;      
+    text-indent: -2em;
+}
+
 /* Footer */
 .footer-container {
     position: fixed;
