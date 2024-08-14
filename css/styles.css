@@ -122,6 +122,10 @@ h3.challs {
     padding-top: 4.375rem;
 }
 
+.challenge-des p {
+    font-size: 0.9rem;
+}
+
 .about {
     width: 100%;
     text-align: left;
@@ -903,9 +907,16 @@ pre {
 
 pre span.indent {
     /* display: block; */
-    margin-left: 10rem;      
+    margin-left: 10em;      
     text-indent: -2em;
 }
+
+.ethics a {
+    display: inline;
+    color: var(--link_color);
+    font-weight: bold;
+}
+
 
 /* Footer */
 .footer-container {
@@ -955,6 +966,10 @@ table.dataTable tbody td.spaced-cell {
     }
 
     li, p.small {
+        font-size: 0.8rem;
+    }
+
+    .challenge-des p {
         font-size: 0.8rem;
     }
 

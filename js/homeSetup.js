@@ -4,7 +4,7 @@ const modelColors = {
   'GPT-4o': '#2980B9',
   'Llama 3 70b Chat': '#F1C40F',
   'Llama 3.1 70b Instruct Turbo': '#E23233',
-  'Mixtral 8x22b': '#1ABC9C',
+  'Mixtral 8x22b Instruct': '#1ABC9C',
 };
 
 function setupHome() {
