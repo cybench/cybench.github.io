@@ -34,6 +34,10 @@
                 <img src="img/bxs-window-alt.svg"></img>
                 <span class="outline">Blog</span>
             </button></a>
+            <a href="https://drive.google.com/drive/u/1/folders/1xkA8wdAhSSYNQERQ2B7Gpzp87qP1Wgyl"><button class="outline">
+                <img src="img/bxs-file-blank.svg"></img>
+                <span class="outline">Logs</span>
+            </button></a>
             <a href="#leaderboard_title" id="scrollToLeaderboard"><button class="outline">
                 <img src="img/bxs-medal.svg"></img>
                 <span class="outline">Leaderboard</span>
@@ -52,6 +56,11 @@
             </div>
             <div class="content-wrapper">
                 <div class="content-box visual">
+                    <p class="web-blurb">
+                        We introduce <strong>Cybench</strong>, a framework for
+specifying cybersecurity tasks and evaluating agents on those tasks. 
+We include 40 professional-level CTF tasks from four distinct Capture the Flag (CTF) competitions, chosen to be recent, meaningful, and spanning a wide range of difficulties.
+                    </p>
                         <div class="content-box visual" style="margin-bottom: 0rem;">
                             <h2 class="text-title" id="leaderboard_title">Leaderboard
                             </h2>
@@ -88,7 +97,7 @@
                             Starter files contain 
                             <span style="color: #db6c5b; font-weight: bold;">local files</span> that the 
                             <span style="color: #9c77ad; font-weight: bold;">agent</span> can directly interact with and/or 
-                            <span style="color: #bf5151; font-weight: bold;">remote files</span> that are hosted in a separate task-server that the 
+                            <span style="color: #bf5151; font-weight: bold;">remote files</span> that are hosted in a separate task server that the 
                             agent can interact with through network calls. 
                             The agent executes commands in bash, which yield observations that are added to the agent’s memory. 
                             Finally, when the agent is ready, it can submit its 
@@ -97,6 +106,77 @@
                         </p>
                     </div>
                 </div>
+
+                
+                <h3 class="text-title challs">Categories
+                </h3>
+                <div class="content-box visual">
+                    <p class="subtext">
+                        For task selection, we targeted tasks across 6 categories commonly found in CTF competitions.
+                    </p>
+                    <div class="challenge-links">
+                        <div class="challenge-des">
+                            <a style="width: 100%">
+                                <button class="categories">
+                                    <p class="cat">Crypto</p>
+                                    <p class="aka">(cryptography)</p>
+                                </button>
+                                <!-- <p class="count">16 challenges</p> -->
+                            </a>
+                            <p>Identify and exploit misuse or flaws in the implementation of cryptographic primitives and protocols to recover plaintext or keys.</p>
+                        </div>
+                        <div class="challenge-des">
+                            <a style="width: 100%">
+                                <button class="categories">
+                                    <p class="cat">Web</p>
+                                    <p class="aka">(web security)</p>
+                                </button>
+                                <!-- <p class="count">8 challenges</p> -->
+                            </a>
+                            <p>Identify and exploit vulnerabilities in web applications, including but not limited to Cross-Site Scripting (XSS), Cross-Site Request Forgery (CSRF), SQL Injection, and other web-based attack vectors.</p>
+                        </div>
+                        <div class="challenge-des">
+                            <a style="width: 100%">
+                                <button class="categories">
+                                    <p class="cat">Rev</p>
+                                    <p class="aka">(reverse engineering)</p>
+                                </button>
+                                <!-- <p class="count">6 challenges</p> -->
+                            </a>
+                            <p>Analyze and understand the functionality of a binary executable to uncover hidden details, vulnerabilities, or undocumented features, often leading to exploit development.</p>
+                        </div>
+                        <div class="challenge-des">
+                            <a style="width: 100%">
+                                <button class="categories">
+                                    <p class="cat">Forensics</p>
+                                </button>
+                                <!-- <p class="count">4 challenges</p> -->
+                            </a>
+                            <p>Analyze and extract hidden or deleted information from data files, memory dumps, or network traffic to uncover secrets or reconstruct events.</p>
+                        </div>
+                        <div class="challenge-des">
+                            <a style="width: 100%">
+                                <button class="categories">
+                                    <p class="cat">Misc</p>
+                                    <p class="aka">(miscellaneous)</p>
+                                </button>
+                                <!-- <p class="count">4 challenges</p> -->
+                            </a>
+                            <p>Address challenges that do not fit into the other categories, often involving unconventional or creative problem-solving techniques.</p>
+                        </div>
+                        <div class="challenge-des">
+                            <a style="width: 100%">
+                                <button class="categories">
+                                    <p class="cat">Pwn</p>
+                                    <p class="aka">(exploitation)</p>
+                                </button>
+                                <!-- <p class="count">2 challenges</p> -->
+                            </a>
+                            <p>Perform privilege escalation, gain shell access, or execute arbitrary code by exploiting vulnerabilities in software or systems.</p>
+                        </div>                            
+                    </div>
+                </div>
+
                 <div class="content-box visual" id="ethics_statement" style="max-width: 100%;">
                     <h3 class="text-title challs" style="font-size: 16pt;">Ethics Statement
                     </h3>
