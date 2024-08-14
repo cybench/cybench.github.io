@@ -331,7 +331,7 @@ th.subheader {
 
 .categories p.cat {
     font-weight:600;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -397,6 +397,9 @@ button.models{
     padding: 0.625rem;
 }
 
+.web-blurb {
+    max-width: 40rem;
+}
 .challenge-links.grid-column button.categories {
     padding: 0.5625rem 0.9375rem;
     margin-bottom: 0.625rem;
@@ -405,6 +408,7 @@ button.models{
 .challenge-des p {
     transition: opacity 0.3s; 
     text-align: justify;
+    font-size: 0.9rem;
 }
 
 .challenge-links.grid-column p:not(.cat) {
