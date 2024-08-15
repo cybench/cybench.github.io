@@ -22,15 +22,15 @@
     <div class="menu">
         <h1 class="header"><a href="index.html">Cybench</a></h1>
         <div class="content-wrapper header button-group">
-            <a href=""><button class="outline">
+            <a target="_blank" href=""><button class="outline">
                 <img src="img/bxs-paper-plane.svg"></img>
                 <span class="outline">Paper</span>
             </button></a>
-            <a href="https://github.com/andyzorigin/cybench"><button class="outline">
+            <a target="_blank" href="https://github.com/andyzorigin/cybench"><button class="outline">
                 <img src="img/icons8-github.svg"></img>
                 <span class="outline">GitHub</span>
             </button></a>
-            <a href=""><button class="outline">
+            <a target="_blank" href=""><button class="outline">
                 <img src="img/bxs-window-alt.svg"></img>
                 <span class="outline">Blog</span>
             </button></a>
@@ -38,7 +38,7 @@
                 <img src="img/bxs-medal.svg"></img>
                 <span class="outline">Leaderboard</span>
             </button></a>
-            <a href="https://drive.google.com/drive/u/1/folders/1xkA8wdAhSSYNQERQ2B7Gpzp87qP1Wgyl"><button class="outline">
+            <a target="_blank" href="https://drive.google.com/drive/u/1/folders/1xkA8wdAhSSYNQERQ2B7Gpzp87qP1Wgyl"><button class="outline">
                 <img src="img/bxs-file-blank.svg"></img>
                 <span class="outline">Logs</span>
             </button></a>
@@ -58,7 +58,9 @@
                 <div class="content-box visual">
                     <p class="web-blurb">
                         <strong>Cybench</strong> 
-                        includes 40 professional-level distinct Capture the Flag (CTF) tasks from 4 CTF competitions, chosen to be recent, meaningful, and spanning a wide range of difficulties. We add subtasks, which break down a task into intermediary steps for more gradated evaluation, to 17 of these tasks.
+                        includes 
+                        40 professional-level Capture the Flag (CTF) tasks from 4 distinct CTF competitions, chosen to be recent, meaningful, and spanning a wide range of difficulties.
+                        We add <i>subtasks</i>, which break down a task into intermediary steps for more gradated evaluation, to 17 of the 40 tasks. 
                     </p>
                         <div class="content-box visual" style="margin-bottom: 0rem;">
                             <h2 class="text-title" id="leaderboard_title">Leaderboard
@@ -92,14 +94,14 @@
                         <p class="text-content context small">
                             Each task includes a <span style="color: #c7b05a; font-weight: bold;">task description</span>, 
                             <span style="color: #d39090; font-weight: bold;">starter files</span>, and an <span style="color: #7f9fb3; font-weight: bold;">evaluator</span>. 
-                            A task can also have subtasks, each with an associated question and answer which are scored separately for incremental progress. 
-                            The environment <i>(S)</i> consists of the Kali Linux container and associated 
-                            <span style="color: #db6c5b; font-weight: bold;">local files</span> and the task server with 
+                            A task can also have subtasks, each with an associated question and answer which are scored sequentially for incremental progress. 
+                            The environment <i>(S)</i> consists of the Kali Linux container containing any task-specific  
+                            <span style="color: #db6c5b; font-weight: bold;">local files</span> and any task server(s) instantiated by  
                             <span style="color: #9b3c3c; font-weight: bold;">remote files</span>. The 
-                            <span style="color: #9c77ad; font-weight: bold;">agent</span> can directly interact with the 
-                            <span style="color: #db6c5b; font-weight: bold;">local files</span> and/or
-                            <span style="color: #9b3c3c; font-weight: bold;">remote files</span> that the agent can interact with through network calls.
-                            The agent provides a response <i>(R)</i> which contains an action <i>(A)</i> executed in bash, which yields an observation <i>(O)</i>
+                            <span style="color: #9c77ad; font-weight: bold;">agent</span> can directly interact through bash commands with the 
+                            <span style="color: #db6c5b; font-weight: bold;">local files</span> and/or indirectly interact through network calls with the 
+                            <span style="color: #9b3c3c; font-weight: bold;">remote files</span>.
+                            The agent provides a response <i>(R)</i>, which contains an action <i>(A)</i>, which yields an observation <i>(O)</i>
                             that is added to the agent's <span style="color: #939393; font-weight: bold;">memory</span> <i>(M)</i>. 
                             Later, the agent can submit its 
                             <span style="color: #8bbb8d; font-weight: bold;">answer</span>, which the 
@@ -163,7 +165,7 @@
                                 </button>
                                 <!-- <p class="count">4 challenges</p> -->
                             </a>
-                            <p>Address challenges that do not fit into the other categories, often involving unconventional or creative problem-solving techniques.</p>
+                            <p>Identify and exploit vulnerabilities that do not fit into the other categories, often involving unconventional or creative task-solving techniques.
                         </div>
                         <div class="challenge-des">
                             <a style="width: 100%">
@@ -189,20 +191,21 @@
                                 Here we acknowledge that the agent and the benchmark are dual-use. In this space, there have been works that have chosen to release their code and others that have chosen to withhold the details of their research. After carefully weighing the benefits and harms of each choice, we have chosen to release our code and data and will explain our reasoning below.
                             </span>
                             <span class="paragraph">
-                                In considering the harms, the concern of releasing the agent is that it may be leveraged to identify vulnerabilities and execute exploits on real systems by malicious actors. Current agents are not able to complete difficult cybersecurity tasks which constraints their risks. However, the growing capabilities of LM agents suggests that LM agents may soon substantially outclass non-LM based tools, and thereby unleash harm at a greater magnitude than existing technologies. Here, releasing the framework may accelerate development of stronger cybersecurity agents and expedite this future. Additionally, while there are non-AI tools that can perform similar functions (such as those for automated penetration testing and others explicitly designed for malicious purposes), another potential concern is that AI-based tools such as the agent are non-deterministic and accordingly would be harder to defend from.
+                                In considering the harms, the concern of releasing the agent is that it may be leveraged by malicious actors to identify vulnerabilities and execute exploits on real systems
+                                Current agents are not able to complete difficult cybersecurity tasks which limits the risk they pose. However, the growing capabilities of LM agents suggests that LM agents may soon substantially outclass non-LM based tools, and thereby unleash harm at a greater magnitude than existing technologies. Here, releasing the framework may accelerate development of stronger cybersecurity agents and expedite this future. While there are non-AI open-source tools that can perform similar functions (such as those for automated penetration testing and scanning), a potential concern is that AI-based tools are non-deterministic and accordingly would be harder to defend against.
                             </span>
                             <span class="paragraph">
-                                Next in considering benefits, the agent can be seen as an automated penetration testing tool. Automated penetration testing tools such as <a target="_blank"href="https://www.metasploit.com/">Metasploit</a> and <a target="_blank"href="https://owasp.org/www-project-nettacker/">OWASP Nettacker</a> are open source and widely adopted with the awareness that they can be leveraged by malicious actors for attacks because the benefits outweigh the risks. Here, the agent can be likened to an automated penetration testing tool as it identifies vulnerabilities and exploits them. Similarly, the benchmark would encourage development of such tools that have a similar risk-benefit profile to other automated penetration testing tools, and hence be beneficial to release.
+                                In considering the benefits, the agent can be viewed as an automated penetration testing tool. Automated penetration testing tools such as <a target="_blank"href="https://www.metasploit.com/">Metasploit</a> and <a target="_blank"href="https://owasp.org/www-project-nettacker/">OWASP Nettacker</a> are open-source and widely adopted because the benefits vastly outweigh the risks. Here, the agent can be likened to an automated penetration testing tool as it identifies vulnerabilities and exploits them. Similarly, the benchmark would encourage development of such tools that have a similar risk-benefit profile to other automated penetration testing tools, and hence be beneficial to release.
                             </span>
                             <span class="paragraph">
-                                Additionally, because related works have already openly released their code, any marginal increase in risk would be minimal. For instance, <a target="_blank"href="http://dx.doi.org/10.1145/3611643.3613083">Happe & Cito (2023)</a> release code to leverage LMs for penetration testing, arguing that attackers will use LMs and that defenders would need to prepare to defend with LMs too. Similarly <a target="_blank"href="https://arxiv.org/abs/2406.05590">Shao et al (2024)</a> release code for an agent and a benchmark for CTF tasks after discussing the dual nature of AI as both a tool and a potential threat in cybersecurity. While this work has made distinct contributions, the risk profile of releasing this work is similar, and possibly less than those other works, given that alternative agents and benchmarks already exist.
+                                Additionally, because related works have already openly released their code, any marginal increase in risk would be minimal. For instance, <a target="_blank"href="http://dx.doi.org/10.1145/3611643.3613083">Happe & Cito (2023)</a> release code to leverage LMs for penetration testing, arguing that attackers will use LMs and that defenders would need to prepare to defend with LMs too. Similarly <a target="_blank"href="https://arxiv.org/abs/2406.05590">Shao et al. (2024)</a> release code for an agent and a benchmark for CTF tasks after discussing the dual nature of AI as both a tool and a potential threat in cybersecurity. While this work has made distinct contributions, the risk profile of releasing this work is similar, and possibly less than those other works, given that alternative agents and benchmarks already exist.
                             </span>
                             <span class="paragraph">
                                 Furthermore, as there has been significant interest and consideration by governments to regulate AI, we critically need more evidence and data for informed decisions and responsible regulation. 
-                                There have been many efforts to assess cybersecurity risk, both by government organizations such as the <a target="_blank"href="https://www.aisi.gov.uk/work/advanced-ai-evaluations-may-update">AI Safety Institute</a> and by model providers. By making our work available in a transparent fashion, we can help policy-makers better understand current capabilities and risks of cybersecurity agents, when government often lacks such systematic information.  This evidence should ideally inform responsible regulatory efforts.
+                                There have been many efforts to assess cybersecurity risk, both by government organizations such as the <a target="_blank"href="https://www.aisi.gov.uk/work/advanced-ai-evaluations-may-update">AI Safety Institute</a> and by model providers. By making our work available in a transparent fashion, we can help policymakers better understand current capabilities and risks of cybersecurity agents, when government often lacks such systematic information.  This evidence should ideally inform responsible regulatory efforts.
                             </span>
                             <span class="paragraph">
-                                Finally, as scientific researchers, we believe that reproducibility and transparency are central to the AI ecosystem. The reproducibility crisis affecting the sciences has affected machine learning as well, owing to mistakes and/or even fraud and fabrication. While transparency in code, data, and methods is not sufficient to guarantee reproducibility (as mistakes can, of course, occur in the research process), obscurity can ensure irreproducibility. Additionally, releasing our code allows the community to build upon our work, helping accelerate scientific progress.
+                                Finally, as scientific researchers, we believe that reproducibility and transparency are central to the AI ecosystem. The reproducibility crisis affecting the sciences has affected machine learning as well, owing to mistakes and/or even fraud and fabrication. While transparency in code, data, and methods is not sufficient to guarantee reproducibility (as mistakes can, of course, occur in the research process), obscurity can ensure irreproducibility. Additionally, releasing our code allows the community to build on our work, helping accelerate scientific progress.
                             </span>
                             <span class="paragraph">
                                 After weighing the various factors, we choose to release our code and data publicly.

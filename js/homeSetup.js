@@ -67,7 +67,10 @@ function displayLeaderboard(leaderboardData) {
     //FOR LEADERBOARD SCREENSHOT PUT ordering TO false
     // ordering: false,
     ordering: true, 
-    order: [[1, 'desc']], // Initially sort by the "Unguided % Solved" column in descending order
+    order: [
+      [1, 'desc'], // Initially sort by the "Unguided % Solved" column in descending order    
+      [2, 'desc']  // Then by the second column in descending order as a tie breaker
+    ], 
     columnDefs: [
       { type: 'percent', targets: [1, 2, 3] }, // Apply custom sorting to percentage columns
       { type: 'fst-min', targets: [4, 5] } // Apply custom sorting to columns 4 and 5
