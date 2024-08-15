@@ -22,7 +22,7 @@
     <div class="menu">
         <h1 class="header"><a href="index.html">Cybench</a></h1>
         <div class="content-wrapper header button-group">
-            <a target="_blank" href=""><button class="outline">
+            <a target="_blank" href="TODO"><button class="outline">
                 <img src="img/bxs-paper-plane.svg"></img>
                 <span class="outline">Paper</span>
             </button></a>
@@ -30,7 +30,7 @@
                 <img src="img/icons8-github.svg"></img>
                 <span class="outline">GitHub</span>
             </button></a>
-            <a target="_blank" href=""><button class="outline">
+            <a target="_blank" href="https://crfm.stanford.edu/2024/08/15/cybench.html"><button class="outline">
                 <img src="img/bxs-window-alt.svg"></img>
                 <span class="outline">Blog</span>
             </button></a>
@@ -188,17 +188,18 @@
                             There is a long history of dual-use technology in cybersecurity and there have been extensive discussion of how to weigh the benefits and risks of releasing such technologies. For instance, <a target="_blank"href="https://www.sciencedirect.com/science/article/pii/ S0167404813001326.">Silic (2013)</a> surveys practitioners and finds that empirically practitioners agree that dual-use technology has both benefits and harms, as malicious attackers can use them for harm but good actors can use them for defense. 
                             <a target="_blank"href="https://heinonline.org/HOL/LandingPage?handle=hein.journals/geojaf16&div=73&id=&page=">Rad (2015)</a> argues that while such technology can be used for harm, restrictions can hinder the benefits of the technology more than the harms, as malicious actors may simply obtain equivalent technology through alternative means such as black markets that are not available to law-abiding actors.
                             <span class="paragraph">
-                                Here we acknowledge that the agent and the benchmark are dual-use. In this space, there have been works that have chosen to release their code and others that have chosen to withhold the details of their research. After carefully weighing the benefits and harms of each choice, we have chosen to release our code and data and will explain our reasoning below.
+                                Here we acknowledge that the agent and the benchmark are dual-use. 
+                                In this space, there have been works (<a target="_blank"href="http://dx.doi.org/10.1145/3611643.3613083">Happe & Cito, 2023</a>; <a target="_blank" href="https://arxiv.org/abs/2402.11814">Shao et al. 2024a</a>;<a target="_blank"href="https://arxiv.org/abs/2406.05590">b</a>; <a target="_blank" href="https://openreview.net/forum?id=KOZwk7BFc3">Yang et al., 2023b</a>) that have chosen to release their code and others (<a target="_blank"href="https://arxiv.org/abs/2404.08144v2">Fang et al. 2024a</a>;<a target="_blank"href="https://arxiv.org/abs/2402.06664">b</a>;<a target="_blank"href="https://arxiv.org/abs/2406.01637">c</a>) that have chosen to withhold the details of their research. After carefully weighing the benefits and harms of each choice, we have chosen to release our code and data and will explain our reasoning below.
                             </span>
                             <span class="paragraph">
-                                In considering the harms, the concern of releasing the agent is that it may be leveraged by malicious actors to identify vulnerabilities and execute exploits on real systems
+                                In considering the harms, the concern of releasing the agent is that it may be leveraged by malicious actors to identify vulnerabilities and execute exploits on real systems.
                                 Current agents are not able to complete difficult cybersecurity tasks which limits the risk they pose. However, the growing capabilities of LM agents suggests that LM agents may soon substantially outclass non-LM based tools, and thereby unleash harm at a greater magnitude than existing technologies. Here, releasing the framework may accelerate development of stronger cybersecurity agents and expedite this future. While there are non-AI open-source tools that can perform similar functions (such as those for automated penetration testing and scanning), a potential concern is that AI-based tools are non-deterministic and accordingly would be harder to defend against.
                             </span>
                             <span class="paragraph">
                                 In considering the benefits, the agent can be viewed as an automated penetration testing tool. Automated penetration testing tools such as <a target="_blank"href="https://www.metasploit.com/">Metasploit</a> and <a target="_blank"href="https://owasp.org/www-project-nettacker/">OWASP Nettacker</a> are open-source and widely adopted because the benefits vastly outweigh the risks. Here, the agent can be likened to an automated penetration testing tool as it identifies vulnerabilities and exploits them. Similarly, the benchmark would encourage development of such tools that have a similar risk-benefit profile to other automated penetration testing tools, and hence be beneficial to release.
                             </span>
                             <span class="paragraph">
-                                Additionally, because related works have already openly released their code, any marginal increase in risk would be minimal. For instance, <a target="_blank"href="http://dx.doi.org/10.1145/3611643.3613083">Happe & Cito (2023)</a> release code to leverage LMs for penetration testing, arguing that attackers will use LMs and that defenders would need to prepare to defend with LMs too. Similarly <a target="_blank"href="https://arxiv.org/abs/2406.05590">Shao et al. (2024)</a> release code for an agent and a benchmark for CTF tasks after discussing the dual nature of AI as both a tool and a potential threat in cybersecurity. While this work has made distinct contributions, the risk profile of releasing this work is similar, and possibly less than those other works, given that alternative agents and benchmarks already exist.
+                                Additionally, because related works have already openly released their code, any marginal increase in risk would be minimal. For instance, <a target="_blank"href="http://dx.doi.org/10.1145/3611643.3613083">Happe & Cito (2023)</a> release code to leverage LMs for penetration testing, arguing that attackers will use LMs and that defenders would need to prepare to defend with LMs too. Similarly <a target="_blank"href="https://arxiv.org/abs/2406.05590">Shao et al. (2024b)</a> release code for an agent and a benchmark for CTF tasks after discussing the dual nature of AI as both a tool and a potential threat in cybersecurity. While this work has made distinct contributions, the risk profile of releasing this work is similar, and possibly less than those other works, given that alternative agents and benchmarks already exist.
                             </span>
                             <span class="paragraph">
                                 Furthermore, as there has been significant interest and consideration by governments to regulate AI, we critically need more evidence and data for informed decisions and responsible regulation. 
@@ -210,7 +211,7 @@
                             <span class="paragraph">
                                 After weighing the various factors, we choose to release our code and data publicly.
                             </span>
-                        </p>                                             
+                        </p>                                               
                     </div>
                 </div>
                 <div class="content-box visual" style="margin-top: 2rem; max-width: 100%">
