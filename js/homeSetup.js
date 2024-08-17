@@ -75,7 +75,8 @@ function displayLeaderboard(leaderboardData) {
       { type: 'percent', targets: [1, 2, 3] }, // Apply custom sorting to percentage columns
       { type: 'fst-min', targets: [4, 5] } // Apply custom sorting to columns 4 and 5
     ],
-    info: false
+    info: false,
+    scrollCollapse: true
   });
   
       // Apply initial highlighting to the sorted column
