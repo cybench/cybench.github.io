@@ -22,7 +22,7 @@
     <div class="menu">
         <h1 class="header"><a href="index.html">Cybench</a></h1>
         <div class="content-wrapper header button-group">
-            <a target="_blank" href="TODO"><button class="outline">
+            <a target="_blank" href="TODO_LINK"><button class="outline">
                 <img src="img/bxs-paper-plane.svg"></img>
                 <span class="outline">Paper</span>
             </button></a>
@@ -220,20 +220,57 @@
                             Cite:
                         </p>
                         <div class="citation">
-                            <pre id="bibtex-citation">
-@misc{PLACEHOLDER_KEY,
-    author        = {PLACEHOLDER_AUTHOR},
-    title         = {Cybench: A Framework for Evaluating
-    <span class="indent">Cybersecurity Capabilities and Risk},</span>
-    year          = {2024},
-    eprint        = {EPRINT_KEY},
-    archivePrefix = {arXiv},
-    primaryClass  = {PRIMARY_CLASS}
-    url           = {https://arxiv.org/abs/PLACEHOLDER_ARXIV_ID},
-    note          = {Accessed: PLACEHOLDER_ACCESS_DATE},
-}</pre>
+                            
+                            <div class="bibtex-field">
+                                @misc{TODO_KEY,
+                            </div>
+                            <div class="bibtex-entry">
+                                <div class="bibtex-field">
+                                    <span class="bibtex-label">author</span>
+                                    <span class="bibtex-equals">=</span>
+                                    <span class="bibtex-value">{Andy Zhang, Neil Perry, Riya Dulepet, Eliot Jones, Justin Lin, Joey Ji, Celeste Menders, Gashon Hussein, Samantha Liu, Donovan Jasper, Pura Peetathawatchai, Ari Glenn, Vikram Sivashankar, Daniel Zamoshchin, Leo Glikbarg, Derek Askaryar, Mike Yang, Teddy Zhang, Rishi Alluri, Nathan Tran, Rinnara Sangpisit, Polycarpos Yiorkadjis, Kenny Osele, Gautham Raghupathi, Dan Boneh, Daniel E. Ho, Percy Liang},</span>
+                                </div>
+                                <div class="bibtex-field">
+                                    <span class="bibtex-label">title</span>
+                                    <span class="bibtex-equals">=</span>
+                                    <span class="bibtex-value">{Cybench: A Framework for Evaluating Cybersecurity Capabilities and Risk},</span>
+                                </div>
+                                <div class="bibtex-field">
+                                    <span class="bibtex-label">year</span>
+                                    <span class="bibtex-equals">=</span>
+                                    <span class="bibtex-value">{2024},</span>
+                                </div>
+                                <div class="bibtex-field">
+                                    <span class="bibtex-label">eprint</span>
+                                    <span class="bibtex-equals">=</span>
+                                    <span class="bibtex-value">{TODO_EPRINT_KEY},</span>
+                                </div>
+                                <div class="bibtex-field">
+                                    <span class="bibtex-label">archivePrefix</span>
+                                    <span class="bibtex-equals">=</span>
+                                    <span class="bibtex-value">{arXiv},</span>
+                                </div>
+                                <div class="bibtex-field">
+                                    <span class="bibtex-label">primaryClass</span>
+                                    <span class="bibtex-equals">=</span>
+                                    <span class="bibtex-value">{cs.LG},</span>
+                                </div>
+                                <div class="bibtex-field">
+                                    <span class="bibtex-label">url</span>
+                                    <span class="bibtex-equals">=</span>
+                                    <span class="bibtex-value">{https://arxiv.org/abs/TODO_ARXIV_ID},</span>
+                                </div>
+                                <div class="bibtex-field">
+                                    <span class="bibtex-label">note</span>
+                                    <span class="bibtex-equals">=</span>
+                                    <span class="bibtex-value" id="bibtex-time">{Accessed: PLACEHOLDER_ACCESS_DATE},</span>
+                                </div>
+                                <div class="bibtex-field">
+                                    <span class="bibtex-end">}</span>
+                                </div>
+                            </div>
+
                         </div>
-                    </div>
                 </div>
             </div>
 
@@ -248,7 +285,7 @@
     </footer>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-          var bibtexElement = document.getElementById('bibtex-citation');
+            var bibtexElement = document.getElementById('bibtex-time');
           var currentDate = new Date();
           var formattedDate = currentDate.toISOString().split('T')[0]; // Formats as YYYY-MM-DD
           var bibtexContent = bibtexElement.innerHTML;

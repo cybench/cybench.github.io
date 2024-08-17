@@ -145,6 +145,42 @@ span.outline.scrolled {
     visibility: hidden;
 }
 
+
+.bibtex-entry {
+    display: grid;
+    grid-template-columns: min-content auto 1fr;
+    column-gap: 0.75rem; /* Space between columns */
+}
+
+.bibtex-field {
+    display: contents; /* Allow children to follow grid layout */
+}
+
+.bibtex-label {
+    grid-column: 1; /* Place label in the first column */
+    white-space: nowrap; /* Prevent wrapping of labels */
+    margin-left: 1rem;
+}
+
+.bibtex-equals {
+    grid-column: 2; /* Place the '=' in the second column */
+}
+
+.bibtex-value {
+    grid-column: 3; /* Place the value in the third column */
+    white-space: pre-wrap; /* Allow wrapping of values */
+}
+
+.indent {
+    display: inline-block;
+    text-indent: 20px; /* Indent wrapped lines within values */
+}
+
+.bibtex-end {
+    grid-column: 1 / span 3; /* Ensure the closing brace spans all columns */
+    margin-left: 0;
+}
+
 button.outline.scrolled, button.outline.scrolled.spaced {
     width: 3em;
 }
