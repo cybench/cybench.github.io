@@ -123,7 +123,7 @@ function getLeaderboardHeaderHTML() {
       </tr>
       <tr>
         <th class="subheader">Unguided Run</th>
-        <th class="subheader">Subtask Run</th>
+        <th class="subheader">Subtask-Guided Run</th>
       </tr>
     </thead>
     <tbody></tbody>
