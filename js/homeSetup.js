@@ -72,11 +72,10 @@ function displayLeaderboard(leaderboardData) {
       [2, 'desc']  // Then by the second column in descending order as a tie breaker
     ], 
     columnDefs: [
-      { type: 'percent', targets: [1, 2, 3] }, // Apply custom sorting to percentage columns
-      { type: 'fst-min', targets: [4, 5] } // Apply custom sorting to columns 4 and 5
+      { type: 'percent', targets: [1, 2, 3], orderSequence: ['desc', 'asc'] }, // Apply custom sorting to percentage columns
+      { type: 'fst-min', targets: [4, 5] , orderSequence: ['desc', 'asc']} // Apply custom sorting to columns 4 and 5
     ],
-    info: false,
-    scrollCollapse: true
+    info: false
   });
   
       // Apply initial highlighting to the sorted column
