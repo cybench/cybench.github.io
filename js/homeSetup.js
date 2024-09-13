@@ -119,7 +119,7 @@ function getLeaderboardHeaderHTML() {
         <th rowspan="2" style="max-width: 6rem;">Unguided % Solved</th>
         <th rowspan="2" class="wrap">Subtask-Guided % Solved</th>
         <th rowspan="2" class="wrap">Subtasks % Solved</th>
-        <th colspan="2">Most Difficult Task Solved (First Solve Time)</th>
+        <th colspan="2">Most Difficult Task Solved (First Solve Time by Humans)</th>
       </tr>
       <tr>
         <th class="subheader">Unguided Run</th>
