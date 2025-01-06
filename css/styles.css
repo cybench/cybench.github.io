@@ -991,6 +991,14 @@ table.dataTable tbody td.spaced-cell {
     padding-top: 10.9375rem;
 }
 
+.impact li {
+    font-size: 0.9rem;
+}
+
+.impact a {
+    text-decoration: none;
+}
+
 @media (max-width: 50rem) {
     section {
         padding: 0.25rem;

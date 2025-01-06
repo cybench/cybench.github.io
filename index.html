@@ -50,6 +50,10 @@
                 <img src="img/bxs-book-bookmark.svg"></img>
                 <span class="outline">Ethics</span>
             </button></a>
+            <a href="#impact" id="scrollToImpact"><button class="outline">
+                <img src="img/bxs-network-chart.svg"></img>
+                <span class="outline">Impact</span>
+            </button></a>
         </div>
     </div>
 
@@ -185,7 +189,7 @@
                 </div>
 
                 <div class="content-box visual" id="ethics_statement" style="max-width: 100%;">
-                    <h3 class="text-title challs" style="font-size: 16pt;">Ethics Statement
+                    <h3 class="text-title challs" style="font-size: 1.5rem;">Ethics Statement
                     </h3>
                     <div class="text-swatch" style="width:45rem; max-width: 100%; background: none">
                         <p class="text-content context small ethics">
@@ -196,6 +200,25 @@
                         </p>                                                          
                     </div>
                 </div>
+
+
+                <div class="content-box visual" id="impact" style="max-width: 100%; ">
+                    <h3 class="text-title challs" style="font-size: 1.5rem; padding-top: 2rem;">Impact
+                    </h3>
+                    <div class="text-swatch" style="width:45rem; max-width: 100%; background: none">
+                        <div class="context impact" style="padding-left: 1rem; padding-top:0;">
+                            <ul style="list-style-type: disc; padding-left: 1.5rem;">
+                                <li style="margin-bottom: 15px;">
+                                    US AISI and UK AISI has leveraged Cybench as the only open source cybersecurity benchmark on their <a href="https://www.nist.gov/system/files/documents/2024/11/19/Upgraded%20Sonnet-Publication-US.pdf" target="_blank">Joint Pre-Deployment Test on Anthropic's Claude 3.5 Sonnet</a> and <a href="https://www.nist.gov/system/files/documents/2024/12/18/US_UK_AI%20Safety%20Institute_%20December_Publication-OpenAIo1.pdf#page8" target="_blank">Joint Pre-Deployment Test on OpenAI o1</a>.
+                                </li>
+                                <li>
+                                    The UK AISI has incorporated Cybench in their <a href="https://ukgovernmentbeis.github.io/inspect_evals/evals/cybersecurity/cybench/" target="_blank">Inspect Evals framework</a>.
+                                </li>
+                            </ul>
+                        </div> 
+                    </div>
+                </div>
+
                 <div class="content-box visual" style="margin-top: 2rem; max-width: 100%">
                     <div class="text-swatch" style="width:50rem; max-width: 100%;">
                         <p class="text-content" style="padding:1rem">
@@ -252,17 +275,6 @@
                                 </div>
                             </div>
 
-                        </div>
-                        <p class="text-content" style="padding:1rem">See also:</p>
-                        <div class="context" style="padding-left: 1rem; padding-top:0;">
-                            <ul style="list-style-type: disc; padding-left: 1.5rem;">
-                                <li>
-                                    Additional experimental results on Cybench can be found in the US AISI and UK AISI <a href="https://www.nist.gov/system/files/documents/2024/11/19/Upgraded%20Sonnet-Publication-US.pdf" target="_blank">Joint Pre-Deployment Test</a> on Anthropic's Claude 3.5 Sonnet.
-                                </li>
-                                <li>
-                                    Cybench is incorporated and can be run on the UK AISI <a href="https://ukgovernmentbeis.github.io/inspect_evals/evals/cybersecurity/cybench/" target="_blank">Inspect Evals framework</a>.
-                                </li>
-                            </ul>
                         </div>
                     </div>
                 </div>
@@ -344,6 +356,21 @@
 
         // Get the target element
         var target = document.getElementById('ethics_statement');
+
+        var remOffset = 3; // Change this value to your desired rem offset
+        var remInPx = remOffset * parseFloat(getComputedStyle(document.documentElement).fontSize);
+
+        // Calculate the position to scroll to (rem offset converted to px)
+        var offsetTop = target.getBoundingClientRect().top + window.pageYOffset - remInPx;
+
+        // Scroll to the calculated position
+        window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+    });
+    document.getElementById('scrollToImpact').addEventListener('click', function(e) {
+        e.preventDefault(); // Prevent the default anchor click behavior
+
+        // Get the target element
+        var target = document.getElementById('impact');
 
         var remOffset = 3; // Change this value to your desired rem offset
         var remInPx = remOffset * parseFloat(getComputedStyle(document.documentElement).fontSize);
