@@ -135,13 +135,27 @@ function createLeaderboardRow(data) {
   ['model', 'flagSuccess', 'subtaskGuidedSuccess', 'subtaskSuccess', 'fstStandard', 'fstSubtask'].forEach((key, index) => {
     const cell = document.createElement('td');
     cell.classList = 'spaced-cell';
+    let cellContent = data[key];
+
+    // Check if the value is a percentage and replace '%' or 'N/A' with '--'
     if (['flagSuccess', 'subtaskGuidedSuccess', 'subtaskSuccess'].includes(key)) {
-      cell.textContent = data[key] + '%';
-    } else if (['fstStandard', 'fstSubtask'].includes(key) && data[key] != '-') {
-      cell.textContent = data[key] + ' min';
-    } else {
-      cell.textContent = data[key];
+      if ( !cellContent || cellContent === 'N/A' || cellContent === '%') {
+        cellContent = '--';
+      } else {
+        cellContent = cellContent + '%';
+      }
     }
+    // Check if the value is a time and replace 'NaN min' or '-' with '--'
+    else if (['fstStandard', 'fstSubtask'].includes(key)) {
+      if (cellContent === '-' || isNaN(cellContent)) {
+        cellContent = '--';
+      } else {
+        cellContent = cellContent + ' min';
+      }
+    }
+
+    cell.textContent = cellContent;
+
     if (index <= 3) {
       cell.style.borderRight = '1px solid #0e0e0e';
     }
