@@ -84,6 +84,9 @@
                             <p><i>
                                 * Results from <a target="_blank" class="leaderboard-notes" href="https://hal.cs.princeton.edu/cybench">HAL</a> leaderboard evaluation
                             </i></p>
+                            <p style="padding-top: 0.5rem;"><i>
+                                † The scores for OpenAI o3-mini and OpenAI o1-mini are inflated because HAL likely ran on a fork of the Inspect framework that <a target="_blank" class="leaderboard-notes" href="https://transluce.org/introducing-docent#task-vulnerability-in-cybench-port">leaked the answer</a> to a task that both models completed successfully. Their Unguided % Solved scores have been adjusted downward by 2.5% (to 22.5% and 10% respectively) and their FSTs have been updated to reflect their most difficult tasks solved excluding the leaked task (42 min for o3-mini and 11 min for o1-mini).
+                            </i></p>
                         </div>
                         <div class="text-swatch" style="width:60rem; max-width: 100%; padding: 1rem; margin-top: 1rem;">
                             <ul class="metrics-list">
