@@ -966,6 +966,12 @@ pre span.indent {
     font-weight: bold;
 }
 
+.bountybench a {
+    display: inline;
+    color: var(--link_color);
+    font-weight: bold;
+}
+
 
 /* Footer */
 .footer-container {
