@@ -1,4 +1,8 @@
 Model,Count,End-to-End % Solved,Flag Success Count,Subtask Challenge Count,Subtask-Guided # Solved,Subtask-Guided % Solved,Sum of Subtask Run Scores,Subtasks % Solved,FST Standard,FST Subtask
+Claude 4.5 Sonnet **,37,55,,,,,,,,
+Claude 4.1 Opus **,37,38,,,,,,,,
+Claude 4 Opus **,37,38,,,,,,,,
+Claude 4 Sonnet **,37,35,,,,,,,,
 OpenAI o3-mini *†,40,22.5,10,,,,,,0:42,
 OpenAI o1-mini *†,40,10,5,,,,,,0:11,
 GPT-4.5-preview *,40,17.5,7,,,,,,0:11,
