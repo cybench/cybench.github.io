@@ -91,10 +91,16 @@
                         </div>
                         <div style="width:60rem; max-width: 100%; padding: 0rem 4rem; margin: 0; font-size: .9rem;">
                             <p><i>
-                                * Results for <a target="_blank" class="leaderboard-notes" href="https://hal.cs.princeton.edu/cybench">HAL</a> leaderboard evaluation.
+                                * Results from HAL leaderboard evaluation.
                             </i></p>
                             <p style="padding-top: 0.5rem;"><i>
-                                ** Results for Claude 4.5 Sonnet, Claude 4.1 Opus, Claude 4 Opus, and Claude 4 Sonnet are from the <a target="_blank" class="leaderboard-notes" href="https://assets.anthropic.com/m/12f214efcc2f457a/original/Claude-Sonnet-4-5-System-Card.pdf">Claude 4.5 Sonnet System Card</a> on a subset of 37 problems. Percentages are estimates based on probability of success on 1 trial.
+                                ** Results from the <a target="_blank" class="leaderboard-notes" href="https://assets.anthropic.com/m/12f214efcc2f457a/original/Claude-Sonnet-4-5-System-Card.pdf">Claude 4.5 Sonnet System Card</a> on a subset of 37 problems. Percentages are estimates based on probability of success on 1 trial.
+                            </i></p>
+                            <p style="padding-top: 0.5rem;"><i>
+                                *** Results from the <a target="_blank" class="leaderboard-notes" href="https://assets.anthropic.com/m/64823ba7485345a7/Claude-Opus-4-5-System-Card.pdf">Claude 4.5 Opus System Card</a> on a subset of 39 problems. Percentages are the average pass@1 scores.
+                            </i></p>
+                            <p style="padding-top: 0.5rem;"><i>
+                                **** Results from the <a target="_blank" class="leaderboard-notes" href="https://data.x.ai/2025-08-20-grok-4-model-card.pdf">Grok 4</a>, <a target="_blank" class="leaderboard-notes" href="https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf">Grok 4 Fast</a>, and <a target="_blank" class="leaderboard-notes" href="https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf">Grok 4.1</a> Model Cards.
                             </i></p>
                             <p style="padding-top: 0.5rem;"><i>
                                 † The scores for OpenAI o3-mini and OpenAI o1-mini are inflated because HAL likely ran on a fork of the Inspect framework that <a target="_blank" class="leaderboard-notes" href="https://transluce.org/introducing-docent#task-vulnerability-in-cybench-port">leaked the answer</a> to a task that both models completed successfully. Their Unguided % Solved scores have been adjusted downward by 2.5% (to 22.5% and 10% respectively) and their FSTs have been updated to reflect their most difficult tasks solved excluding the leaked task (42 min for o3-mini and 11 min for o1-mini).
@@ -232,13 +238,13 @@
                                      The UK AISI has incorporated Cybench in its <a href="https://ukgovernmentbeis.github.io/inspect_evals/evals/cybersecurity/cybench/" target="_blank">Inspect Evals framework</a>.
                                  </li>
                                  <li style="margin-bottom: 15px;">
-                                     Anthropic featured Cybench results in its <a href="https://assets.anthropic.com/m/785e231869ea8b3b/original/claude-3-7-sonnet-system-card.pdf" target="_blank">Claude 3.7 Sonnet System Card</a>, <a href="https://www-cdn.anthropic.com/6be99a52cb68eb70eb9572b4cafad13df32ed995.pdf" target="_blank">Claude 4 System Card</a>, <a href="https://assets.anthropic.com/m/4c024b86c698d3d4/original/Claude-4-1-System-Card.pdf" target="_blank">Claude Opus 4.1 System Card</a>, <a href="https://assets.anthropic.com/m/12f214efcc2f457a/original/Claude-Sonnet-4-5-System-Card.pdf" target="_blank">Claude Sonnet 4.5 System Card</a>, and <a href="https://assets.anthropic.com/m/99128ddd009bdcb/Claude-Haiku-4-5-System-Card.pdf" target="_blank">Claude Haiku 4.5 System Card</a>.
+                                     Anthropic featured Cybench results in its <a href="https://assets.anthropic.com/m/785e231869ea8b3b/original/claude-3-7-sonnet-system-card.pdf" target="_blank">Claude 3.7 Sonnet</a>, <a href="https://www-cdn.anthropic.com/6be99a52cb68eb70eb9572b4cafad13df32ed995.pdf" target="_blank">Claude 4</a>, <a href="https://assets.anthropic.com/m/4c024b86c698d3d4/original/Claude-4-1-System-Card.pdf" target="_blank">Claude Opus 4.1</a>, <a href="https://assets.anthropic.com/m/12f214efcc2f457a/original/Claude-Sonnet-4-5-System-Card.pdf" target="_blank">Claude Sonnet 4.5</a>, <a href="https://assets.anthropic.com/m/99128ddd009bdcb/Claude-Haiku-4-5-System-Card.pdf" target="_blank">Claude Haiku 4.5</a>, and <a href="https://assets.anthropic.com/m/64823ba7485345a7/Claude-Opus-4-5-System-Card.pdf" target="_blank">Claude Opus 4.5</a> System Cards.
                                  </li>
                                  <li style="margin-bottom: 15px;">
-                                     Amazon featured Cybench in its evaluation suite for the <a href="https://assets.amazon.science/f6/c5/79dceb124593b3356566ad6723af/the-amazon-nova-premier-technical-report-and-model-card.pdf" target="_blank">Amazon Nova Premier Model Card</a>.
+                                     Amazon featured Cybench in its evaluation suite for the <a href="https://www.amazon.science/publications/amazon-nova-premier-technical-report-and-model-card" target="_blank">Amazon Nova Premier Model Card</a>.
                                  </li>
                                  <li style="margin-bottom: 15px;">
-                                     xAI featured Cybench in its <a href="https://x.ai/documents/2025.02.20-RMF-Draft.pdf" target="_blank">xAI Risk Management Framework</a>.
+                                     xAI featured Cybench in its <a href="https://x.ai/documents/2025.02.20-RMF-Draft.pdf" target="_blank">xAI Risk Management Framework</a> and featured Cybench results in the <a href="https://data.x.ai/2025-08-20-grok-4-model-card.pdf" target="_blank">Grok 4</a>, <a href="https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf" target="_blank">Grok 4 Fast</a>, and <a href="https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf" target="_blank">Grok 4.1</a> Model Cards.
                                  </li>
                                  <li style="margin-bottom: 15px;">
                                      OWASP leveraged Cybench as only benchmark for its <a href="https://genai.owasp.org/resource/owasp-llm-exploit-generation-v1-0-pdf/" target="_blank">LLM Exploit Generation Whitepaper</a>.
