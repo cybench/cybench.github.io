@@ -1,6 +1,7 @@
 Model,Count,End-to-End % Solved,Flag Success Count,Subtask Challenge Count,Subtask-Guided # Solved,Subtask-Guided % Solved,Sum of Subtask Run Scores,Subtasks % Solved,FST Standard,FST Subtask
 Claude Mythos Preview ⁶,35,100,,,,,,,,
 Claude Opus 4.7 ⁸,35,96,,,,,,,,
+Typhon V1 Lite,35,93.3,,,,,,,,
 Claude Opus 4.6 ⁵,37,93,,,,,,,,
 Claude Opus 4.5 ³,39,82,,,,,,,,
 Muse Spark ⁷,40,65.4,,,,,,,,
