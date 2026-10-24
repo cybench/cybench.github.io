@@ -1,4 +1,5 @@
 Model,Count,End-to-End % Solved,Flag Success Count,Subtask Challenge Count,Subtask-Guided # Solved,Subtask-Guided % Solved,Sum of Subtask Run Scores,Subtasks % Solved,FST Standard,FST Subtask
+MopMonk Agent + DeepSeek V4.1 Flash,40,100,,,,,,,,
 Claude Mythos Preview ⁶,35,100,,,,,,,,
 Claude Opus 4.7 ⁸,35,96,,,,,,,,
 Claude Opus 4.6 ⁵,37,93,,,,,,,,
